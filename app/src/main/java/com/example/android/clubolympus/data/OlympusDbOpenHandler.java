@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import com.example.android.clubolympus.data.ClubOlympusContract.MemberEntry;
 
 public class OlympusDbOpenHandler extends SQLiteOpenHelper {
+
     public OlympusDbOpenHandler(Context context ) {
         super(context, ClubOlympusContract.DATABASE_NAME, null,
                 ClubOlympusContract.DATABASE_VERSION );

@@ -128,6 +128,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 MemberEntry._ID,
                 MemberEntry.COLUMN_FIRST_NAME,
                 MemberEntry.COLUMN_LAST_NAME,
+                MemberEntry.COLUMN_GENDER,
                 MemberEntry.COLUMN_SPORT
         };
 

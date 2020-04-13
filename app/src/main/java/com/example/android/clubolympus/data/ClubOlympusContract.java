@@ -27,7 +27,7 @@ public final class ClubOlympusContract {
 
     public static final String SCHEME = "content://";
     public static final String AUTHORITY = "com.example.android.clubolympus";
-    public static final String PATH_MEMBERS = "member";
+    public static final String PATH_MEMBERS = "members";
 
     public static final Uri BASE_CONTENT_URI =
             Uri.parse(SCHEME + AUTHORITY);

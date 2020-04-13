@@ -9,6 +9,7 @@ import androidx.loader.app.LoaderManager;
 import androidx.loader.content.CursorLoader;
 import androidx.loader.content.Loader;
 
+import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.DialogInterface;
@@ -157,6 +158,12 @@ public class AddMemberActivity extends AppCompatActivity implements LoaderManage
         return super.onOptionsItemSelected(item);
     }
 
+    private void camBack() {
+        Intent intent = new Intent(AddMemberActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
+
+
     // Метод вставить в таблицу нового члена клуба (trim - метод который обрезает все пробелы в начале и конце строки)
     private void saveMember() {
         String firstName = firstNameEditText.getText().toString().trim();
@@ -193,6 +200,7 @@ public class AddMemberActivity extends AppCompatActivity implements LoaderManage
                 Toast.makeText(this,"Insertion of data in the table failed", Toast.LENGTH_LONG).show();
             } else {
                 Toast.makeText(this,"Data saved", Toast.LENGTH_LONG).show();
+                camBack();
             }
         } else {
             int rowsChanged = getContentResolver().update(currentMemberUri, contentValues, null, null);
@@ -200,6 +208,7 @@ public class AddMemberActivity extends AppCompatActivity implements LoaderManage
                 Toast.makeText(this,"Saving of data in the table failed", Toast.LENGTH_LONG).show();
             } else {
                 Toast.makeText(this,"Member updated", Toast.LENGTH_LONG).show();
+                camBack();
             }
         }
     }
@@ -287,7 +296,6 @@ public class AddMemberActivity extends AppCompatActivity implements LoaderManage
             } else {
                 Toast.makeText(this, "Member is deleted", Toast.LENGTH_LONG).show();
             }
-
             finish();
         }
     }

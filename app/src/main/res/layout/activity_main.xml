@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:padding="8dp"
     android:scrollbars="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#F5F5F5">
 
 
     <ListView

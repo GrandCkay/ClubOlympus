@@ -3,6 +3,7 @@ package com.example.android.clubolympus.data;
 import android.content.ContentProvider;
 import android.content.ContentUris;
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.UriMatcher;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -80,6 +81,7 @@ public class OlympusContentProvider extends ContentProvider {
                         selectionArgs, null, null, sortOrder);
                 break;
             default:
+                Toast.makeText(getContext(), "Can't query incorrect URI", Toast.LENGTH_LONG).show();
                 throw new IllegalArgumentException("Can't query incorrect URI " + uri);
         }
 
